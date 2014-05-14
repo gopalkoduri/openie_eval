@@ -1,0 +1,34 @@
+1	Abhogi, is, a raga
+1	Abhogi, is a raga in, Carnatic music
+1	Abhogi, adapted to, Hindustani music
+2	Abhogi, is, symmetric scale
+2	Abhogi, is, pentatonic scale
+2	Abhogi, does not contain, panchamam
+2	Abhogi, does not contain, nishadam
+3	Abhogi, is, a janya raga
+3	Abhogi, is a janya raga of, Kharaharapriya
+3	Kharaharapriya, be, 22nd melakartha raga
+3	Abhogi, can be derived from, Gourimanohari
+4	Purandara Dasa, was born in, 1484 CE
+4	Purandara Dasa, was born in, Kshemapura, near Tirthahalli, Shivamogga district, Karnataka state
+5	Bhairavi, is, a janya ragam
+5	Bhraivi, is a janya ragam in, Carnatic music
+6	Manji, has similar muchanas and/or anya swara pattern to, Bhairavi
+6	Mukhari, has similar muchanas and/or anya swara pattern to, Bhairavi
+6	Huseni, has similar muchanas and/or anya swara pattern to, Bhairavi
+7	Niraval, is also known as, Neraval
+7	Niraval, is also known as, Sahitya Vinyasa
+7	Niraval, is considered an important feature in, the extempore improvisation aspect of Carnatic music
+8	Tanam, is, a form
+8	Tanam, is, a form of improvisation
+8	Tanam, is integral to, ragam, tanam, pallavi
+9	Kalyani, similar with, Sankarabharanam
+9	Kalyani, difficult to elaborate on in, raaga alapana
+10	Kalyani, has janya ragam, Hamir Kalyani
+10	Kalyani, has janya ragam, Mohanakalyani
+10	Kalyani, has janya ragam, Saranga
+10	Kalyani, has janya ragam, Sunadavinodini
+10	Kalyani, has janya ragam, Yamuna Kalyani
+11	Kafi thaat, equivalent of, Kharaharapriya
+12	Todi in Carnatic music, different from, Todi in Hindustani music
+13	Carnatic Todi, equivalent of, Hindustani Bhairavi thaat

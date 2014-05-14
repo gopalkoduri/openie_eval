@@ -1,0 +1,8 @@
+SELECT ?s WHERE {
+    { ?s <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Carnatic_instrumentalists> . } 
+    UNION
+    { ?cat <http://www.w3.org/2004/02/skos/core#broader> <http://dbpedia.org/resource/Category:Carnatic_instrumentalists> . 
+      ?s <http://purl.org/dc/terms/subject>* ?cat .
+    } 
+}
+LIMIT 500
