@@ -5,7 +5,5 @@ Source code and other software components of a framework for comparative evaluat
 
 TODOs
 =====
-
-* Code restructuring
 * Documentation
 
