@@ -1,9 +1,13 @@
 OpenIE Evaluation Framework
 ===========================
 
-Source code and other software components of a framework for comparative evaluation of Open Information Extraction systems.
+This repository contains source code for a framework for comparative evaluation of Open Information Extraction (OIE) systems.
+Please read the following paper for detailed information about the tasks involved in the framework. The code is structured 
+along three directories:
 
-TODOs
-=====
-* Documentation
+* **openie_eval**, which contains the python wrappers necessary for computing/processing text using the existing OIE systems.
+* **notebooks** are a set of ipython notebooks, structured and documented in themselves. All tasks in quantitative evaluation
+can be found in one notebook, while each task in qualitative evaluation has a notebook each.
+* **data** is a folder which has input and output data to/of the OIE systems.
 
+The python wrappers and notebooks are documented in place.
