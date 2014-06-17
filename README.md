@@ -2,7 +2,7 @@ OpenIE Evaluation Framework
 ===========================
 
 This repository contains source code for a framework for comparative evaluation of Open Information Extraction (OIE) systems.
-Please read the following paper for detailed information about the tasks involved in the framework. The code is structured 
+Please read the following paper for detailed information about the tasks involved in the framework (TBD). The code is structured 
 along three directories:
 
 * **openie_eval** contains the python wrappers necessary for computing/processing text using the existing OIE systems.
