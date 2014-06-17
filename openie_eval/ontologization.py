@@ -15,10 +15,13 @@ stemmer = PorterStemmer()
 import semantic_parsing as sp
 
 from os.path import expanduser
-home = expanduser("~")
+workspace = expanduser("~") + '/workspsce/openie_eval/'
 
 
 def ochiai_coefficient(x, y):
+    """
+    Computes cosine similarity/ochiai coefficient between two given vectors x and y
+    """
     x = set(x)
     y = set(y)
     return len(x.intersection(y)) / (sqrt(len(x) * len(y)))
@@ -28,13 +31,13 @@ def remove_stopwords(input_string):
     return ' '.join([i for i in input_string.strip().split() if i not in swords])
 
 
-def normalize(phrase):
+def clean(phrase):
     return stemmer.stem(remove_stopwords(phrase.strip()))
 
 
 def overlap(y, x):
     """
-    %overlap of y with x
+    Compute overlap as given in the paper, of y with x.
     """
     if len(x) != 0:
         return len(set(x).intersection(y))/len(x)
@@ -60,7 +63,7 @@ def get_predicates(relations, min_num_relations=1, normalization=False):
     for i in relations:
         try:
             if normalization:
-                predicates[i[0]].append(normalize(i[1]))
+                predicates[i[0]].append(clean(i[1]))
             else:
                 predicates[i[0]].append(i[1])
         except KeyError:
@@ -96,7 +99,7 @@ def get_objects(relations, min_num_relations=1, split=True, normalization=False,
         i[2] = i[2].lower()
         if split:
             if normalization:
-                parts = normalize(i[2]).split()
+                parts = clean(i[2]).split()
             else:
                 parts = i[2].split()
 
@@ -112,7 +115,7 @@ def get_objects(relations, min_num_relations=1, split=True, normalization=False,
         else:
             try:
                 if normalization:
-                    objects[i[0]].append(normalize(i[2]))
+                    objects[i[0]].append(clean(i[2]))
                 else:
                     objects[i[0]].append(i[2])
             except KeyError:
@@ -219,7 +222,7 @@ def bootstrap(seedset, entities, objects, predicates, expansion=1, iterations=10
 
 
 def load_groundtruth(keyword, classes):
-    input_dir = home + '/workspace/nerpari/data/ground-truth/' + keyword + '/'
+    input_dir = workspace + '/data/ground-truth/' + keyword + '/'
     groundtruth = {}
     for c in classes:
         groundtruth[c] = [i.strip().lower() for i in codecs.open(input_dir + c + '.txt', encoding='utf-8').readlines()]
@@ -304,7 +307,7 @@ if __name__ == "__main__":
     instrument_seedset = ['Mridangam', 'Venu']
     form_seedset = ['Viruttam', 'Varnam', 'Niraval']
 
-    data = codecs.open(home+'/workspace/nerpari/data/ambati/data/carnatic_music/resolved-sentences-unidecoded-sem.txt', encoding='utf-8').readlines()
+    data = codecs.open(workspace+'data/ambati/data/carnatic_music/resolved-sentences-unidecoded-sem.txt', encoding='utf-8').readlines()
 
     relations = []
     #progress = progressbar.ProgressBar(len(data))
@@ -317,7 +320,7 @@ if __name__ == "__main__":
             relations.append(rel)
         #progress.animate(ind)
 
-    wiki_entities = codecs.open(home + '/workspace/nerpari/data/wiki_pages/carnatic_music_pages.txt', encoding='utf-8').readlines()
+    wiki_entities = codecs.open(workspace + 'data/wiki_pages/carnatic_music_pages.txt', encoding='utf-8').readlines()
     wiki_entities = [i.strip() for i in wiki_entities]
 
     filtered_relations = []
