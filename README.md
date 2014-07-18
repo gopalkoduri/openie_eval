@@ -1,3 +1,8 @@
+Note for reviewers
+==================
+All the results can be found in the folder: data/results. Results for quantitative assessment using Hindustani music are at data/results/quantitative/hindustani_music/
+
+
 OpenIE Evaluation Framework
 ===========================
 
